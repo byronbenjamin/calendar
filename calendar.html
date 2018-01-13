@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <title>Calendar</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="calendar.css">
+    <body>
+      <div class="container">
+        <div class="left">
+          <div class="month">
+            <h1 id="month"></h1>
+          </div>
+          <div class="days">
+            <div class="day-of-the-week">Sunday</div>
+            <div class="day-of-the-week">Monday</div>
+            <div class="day-of-the-week">Tuesday</div>
+            <div class="day-of-the-week">Wednesday</div>
+            <div class="day-of-the-week">Thursday</div>
+            <div class="day-of-the-week">Friday</div>
+            <div class="day-of-the-week">Saturday</div>
+          </div>
+          <div id="calendar">
+            <ul id="days-container">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <div class="right">
+          <div class="appointment-header">
+            <h1 id="appointmentsText">Appointments</h1>
+          </div>
+          <div id="appointments"></div>
+          <div id="form-container">
+            <form id="add-form">
+              <h3>Add Appointment</h3></br>
+              Details:
+              <input id='description' type="text" name="description" value="">
+
+              Start Time:
+              <input id='startTime' type="time" name="startTime">
+
+              End Time:
+              <input id='endTime' type="time" name="endTime">
+              <input id='dayOfReservation' type="hidden" value='3'>
+              <input id='month' type="hidden">
+              <input id='day' type="hidden">
+              <input id='year' type="hidden">
+              <input type="submit" value="Submit">
+            </form>
+            <form id="editForm">
+              <h3>Edit Appointment</h3></br>
+              Details:
+              <input id='edit-description' type="text" name="description" value="">
+
+              Start Time:
+              <input id='edit-start-time' type="time" name="startTime">
+
+              End Time:
+              <input id='edit-end-time' type="time" name="endTime">
+
+              <input id='dayOfReservation' type="hidden" value='3'>
+              <input id='month' type="hidden">
+              <input id='day' type="hidden">
+              <input id='year' type="hidden">
+              <input id='edit-index' type="hidden">
+
+              <input type="submit" value="Edit">
+            </form>
+          </div>
+        </div>
+      </div>
+    </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="day.js"></script>
+  <script type="text/javascript" src="appointment.js"></script>
+</html>
